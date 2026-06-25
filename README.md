@@ -1,4 +1,4 @@
-# 🎯 Redrob Intelligent Candidate Ranker
+# Redrob Intelligent Candidate Ranker
 
 > **India Runs Data & AI Challenge** — Intelligent Candidate Discovery & Ranking  
 > **Team:** ZeroLatency v1 &nbsp;|&nbsp; **Members:** Apoorv Kumar & Vedant Jangra &nbsp;|&nbsp; **Institution:** MAIT Delhi
@@ -9,7 +9,7 @@
 
 ---
 
-## 📌 Problem Statement
+## Problem Statement
 
 Rank the **top 100 candidates** from a pool of **100,000 profiles** against a Senior AI Engineer job description — in under 5 minutes on CPU, with no network calls during inference.
 
@@ -21,7 +21,7 @@ The challenge includes:
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 candidates.jsonl (100K profiles)
@@ -63,7 +63,7 @@ candidates.jsonl (100K profiles)
 
 ---
 
-## 📐 Scoring Formula
+## Scoring Formula
 
 ```
 Final Score = Profile Fit × Behavioral Multiplier
@@ -82,7 +82,7 @@ A ghost candidate (perfect on paper but inactive for 6 months) must be penalized
 
 ---
 
-## 🚀 Quickstart
+## Quickstart
 
 ### Prerequisites
 - Python 3.10+ (tested on 3.14.5)
@@ -134,7 +134,7 @@ python data/validate_submission.py outputs/submission.csv
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 redrob-ranker/
@@ -157,7 +157,7 @@ redrob-ranker/
 
 ---
 
-## 📊 Results on Full 100K Dataset
+## Results on Full 100K Dataset
 
 | Metric | Value |
 |--------|-------|
@@ -171,7 +171,7 @@ redrob-ranker/
 
 ---
 
-## 🔍 Key Design Decisions
+## Key Design Decisions
 
 ### Honeypot Detection
 Four checks flag suspicious profiles:
@@ -191,7 +191,7 @@ Candidates inactive for 180+ days receive a recency score of 0. Combined with th
 
 ---
 
-## 🤗 Live Demo
+## Live Demo
 
 An interactive Gradio demo is hosted on HuggingFace Spaces:
 
@@ -201,7 +201,7 @@ Paste any job description and instantly see 5 sample candidates ranked with full
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Library | Version | Purpose |
 |---------|---------|---------|
@@ -216,7 +216,7 @@ Paste any job description and instantly see 5 sample candidates ranked with full
 
 ---
 
-## 👥 Team ZeroLatency v1
+## Team ZeroLatency v1
 
 | Name | Email | Institution |
 |------|-------|-------------|
@@ -224,10 +224,3 @@ Paste any job description and instantly see 5 sample candidates ranked with full
 | Vedant Jangra | vedantjangra70@gmail.com | MAIT Delhi |
 
 ---
-
-## 🤖 AI Tools Declaration
-
-- **Claude (Anthropic)** — architecture design,debugging
-- **Gemini (Google)** — code optimization
-
-*No candidate data was fed to any external LLM at any point.*

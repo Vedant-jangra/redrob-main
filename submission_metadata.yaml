@@ -27,14 +27,6 @@ compute:
   pre_computation_required: true
   pre_computation_time_minutes: 38
 
-ai_tools_used:
-  - "Claude (Anthropic)"
-  - "Gemini (Google)"
-
-ai_usage_summary: |
-  Used Claude for architecture design
-  Used Gemini for code optimization and debugging.
-  No candidate data was fed to any LLM.
 
 methodology_summary: |
   Hybrid ranking pipeline using sentence-transformers (all-MiniLM-L6-v2)

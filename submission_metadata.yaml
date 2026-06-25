@@ -1,0 +1,54 @@
+team_name: "ZeroLatency v1"
+
+team_members:
+  - name: "Apoorv Kumar"
+    email: "kumarapoorv4503@gmail.com"
+    role: "ML Engineer"
+    institution: "Maharaja Agrasen Institute of Technology, Delhi"
+  - name: "Vedant Jangra"
+    email: "vedantjangra70@gmail.com"
+    role: "ML Engineer"
+    institution: "Maharaja Agrasen Institute of Technology, Delhi"
+
+github_repo: "https://github.com/Apoorv4503/redrob-ranker-"
+
+sandbox_link: "https://huggingface.co/spaces/Apoorv4503/redrob-ranker"
+
+reproduce_command: "python src/rank.py --candidates ./data/candidates.jsonl --artifacts ./artifacts/ --out ./outputs/submission.csv"
+
+compute:
+  platform: "Windows 11 Dell"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.14.5"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: true
+  pre_computation_time_minutes: 38
+
+ai_tools_used:
+  - "Claude (Anthropic)"
+  - "Gemini (Google)"
+
+ai_usage_summary: |
+  Used Claude for architecture design
+  Used Gemini for code optimization and debugging.
+  No candidate data was fed to any LLM.
+
+methodology_summary: |
+  Hybrid ranking pipeline using sentence-transformers (all-MiniLM-L6-v2)
+  for semantic embeddings + FAISS ANN search across 100K candidates.
+  Final score = semantic_similarity x behavioral_multiplier x career_quality.
+  Behavioral signals (recency, notice period, response rate, open_to_work)
+  act as a multiplier to down-weight ghost candidates. Career quality checks
+  product vs consulting company ratio and shipping track record.
+  Honeypot detection via timeline inconsistency checks flagged 9,264 candidates.
+  Ranking step completes in 16.8s on CPU.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true

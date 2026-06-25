@@ -1,0 +1,11 @@
+venv/
+data/
+artifacts/
+outputs/
+*.jsonl
+*.npy
+*.faiss
+*.csv
+__pycache__/
+.env
+*.zip
